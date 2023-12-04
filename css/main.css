@@ -8,7 +8,9 @@ body {
 nav {
   width: auto;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   color: #7C6A0A;
   padding: 15px;
 }
@@ -29,14 +31,17 @@ article {
   width: auto;
   color: #7C6A0A;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   padding-left: 45px;
   padding-right: 45px;
   padding-top: 70px;
-  justify-content: space-between;
 }
 article .impact-section {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
   padding-top: 50px;
   gap: 25px;
 }
@@ -49,13 +54,20 @@ article p {
   font-size: 1.5em;
 }
 article button {
+  background: none;
+  border-style: none;
+}
+article button {
   width: 12vw;
   padding: 20px;
   background-color: #FA9500;
-  border-style: none;
   border-radius: 35px;
   color: white;
   font-size: 1em;
+}
+article button:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
 }
 article img {
   width: 25vw;
@@ -71,37 +83,132 @@ section h2 {
   color: #7C6A0A;
   font-size: 2em;
 }
-section .healthcare h2 {
+section .healthcare, section .furniture {
+  padding-bottom: 60px;
+}
+section .healthcare h2, section .furniture h2 {
   font-weight: 300;
   padding-bottom: 60px;
 }
-section .healthcare .card-section {
-  display: flex;
+section .healthcare .card-section, section .furniture .card-section {
   width: auto;
   height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  -moz-column-gap: 100px;
+       column-gap: 100px;
+  row-gap: 80px;
 }
-section .healthcare .card-section .product-card {
-  width: 12vw;
+section .healthcare .product-card, section .furniture .product-card {
+  width: 14vw;
   height: auto;
   background-color: #FFDAC6;
   color: #7C6A0A;
   padding: 20px;
   border-radius: 8px;
 }
-section .healthcare .card-section .product-card .product-image {
+section .healthcare .product-card .icon, section .furniture .product-card .icon {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 12px;
+}
+section .healthcare .product-card .icon svg, section .furniture .product-card .icon svg {
+  width: 28px;
+  height: 28px;
+  stroke: #7C6A0A;
+  stroke-width: 2;
+}
+section .healthcare .product-card .product-image, section .furniture .product-card .product-image {
   width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-section .healthcare .card-section .product-card .product-image img {
+section .healthcare .product-card .product-image img, section .furniture .product-card .product-image img {
   width: 100%;
   height: 20vh;
   border-radius: 6px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section .furniture .product-card {
+  background-color: #BABD8D;
+  color: white;
+}
+
+.aboutus h2 {
+  font-weight: bold;
+  padding-bottom: 60px;
+}
+.aboutus .mision-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.aboutus .mision-section .earth, .aboutus .mision-section .innovation {
+  width: 30vw;
+  display: flex;
+  gap: 40px;
+  color: #E86424;
+}
+.aboutus .mision-section .earth img, .aboutus .mision-section .innovation img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.aboutus .mision-section .earth p, .aboutus .mision-section .innovation p {
+  text-align: center;
+  font-size: 1.5em;
+}
+.gallery h2 {
+  font-weight: bold;
+  padding-bottom: 60px;
+}
+.gallery .gallery-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.gallery .gallery-images img {
+  width: 28vw;
+  height: 45vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: 5px 35%;
+     object-position: 5px 35%;
+  border-radius: 16px;
+}
+.gallery .gallery-images img:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+}
+
+.location .map {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
 }
 
 footer {
+  background: #FA9500;
   width: 100%;
-  height: 250px;
+  height: auto;
+  padding: 40px;
+  color: white;
+}
+footer .social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-bottom: 40px;
 }/*# sourceMappingURL=main.css.map */
